@@ -15,15 +15,13 @@ export function BackgroundColorProvider({ children }: { children: React.ReactNod
   const [backgroundTheme, setBackgroundTheme] = useState<BackgroundTheme>('light');
 
   useEffect(() => {
-    // Check for saved theme in localStorage or system preference
+    // Check for saved theme in localStorage
     const savedTheme = localStorage.getItem('backgroundTheme') as BackgroundTheme | null;
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
     if (savedTheme) {
       setBackgroundTheme(savedTheme);
-    } else if (systemPrefersDark) {
-      setBackgroundTheme('dark');
     }
+    // Default to light theme if no saved preference
   }, []);
 
   useEffect(() => {
