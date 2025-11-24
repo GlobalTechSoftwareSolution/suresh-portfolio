@@ -30,7 +30,7 @@ const AboutPage = () => {
             {/* Main Profile Image */}
             <div className="relative group">
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur-lg opacity-25 group-hover:opacity-50 transition duration-500"></div>
-              <div className="relative w-full h-80 card rounded-2xl shadow-2xl overflow-hidden border border-white/20">
+              <div className="relative w-full h-96 card rounded-2xl shadow-2xl overflow-hidden border border-white/20">
                 <img 
                   src="/image.png" 
                   alt="Suresh S - Senior Financial Services Executive"
@@ -41,34 +41,31 @@ const AboutPage = () => {
             </div>
             
             {/* Scanner Image with Text */}
-            <div className="space-y-4 mt-20">
+            <div className="space-y-4 mt-56">
               <div className="text-center">
                 <h3 className="text-lg font-semibold text-foreground">Scan this to contact</h3>
-                <p className="text-sm text-foreground/70 mt-2 mb-10">Quick connect via QR code</p>
+                <p className="text-sm text-foreground/70 mt-2 mb-6">Quick connect via QR code</p>
               </div>
-              <div className="relative group">
-                <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur-lg opacity-25 group-hover:opacity-50 transition duration-500"></div>
-                <div className="relative w-full h-80 card rounded-2xl shadow-2xl overflow-hidden border border-white/20">
+              <div className="relative group flex justify-center">
+                <div className="relative w-64 h-64 card rounded-2xl shadow-2xl overflow-hidden border border-white/20 flex items-center justify-center">
                   <img 
-                  src="/images/scanner.jpg" 
-                  alt="Professional Scanner"
-                  className="w-full h-full object-contain transform group-hover:scale-105 transition duration-700 ease-out"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.style.display = 'none';
-                    if (target.nextElementSibling) {
-                      (target.nextElementSibling as HTMLElement).style.display = 'flex';
-                    }
-                  }}
-                />
-
+                    src="/images/scanner.jpg" 
+                    alt="Professional Scanner"
+                    className="w-56 h-56 object-contain"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      if (target.nextElementSibling) {
+                        (target.nextElementSibling as HTMLElement).style.display = 'flex';
+                      }
+                    }}
+                  />
                   <div 
-                    className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-full flex items-center justify-center text-gray-500"
+                    className="bg-gray-200 border-2 border-dashed rounded-xl w-56 h-56 flex items-center justify-center text-gray-500"
                     style={{ display: 'none' }}
                   >
                     Scanner Image
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
                 </div>
               </div>
             </div>

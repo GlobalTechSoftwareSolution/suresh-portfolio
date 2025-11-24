@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { BackgroundColorProvider } from "../context/BackgroundColorContext";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,11 +32,13 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <BackgroundColorProvider>
+          <Navbar />
           {children}
+          <Footer />
         </BackgroundColorProvider>
         {/* WhatsApp Button */}
         <a
-          href="https://wa.me/919380586399?text=Hello%20Suresh,%20I%20would%20like%20to%20discuss%20financial%20services%20with%20you."
+          href="https://wa.me/919632064020?text=Hello%20Suresh,%20I%20would%20like%20to%20discuss%20financial%20services%20with%20you."
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300 z-50"
