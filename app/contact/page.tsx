@@ -95,8 +95,7 @@ Message: ${formData.message}
         </svg>
       ),
       title: "Location",
-      value: "Karnataka, India",
-      description: "Open to remote opportunities"
+      value: "Kattisangavi(Post)\nJewargi (TQ)\nGulbarga(Dist)\nPincode-585310",
     }
   ];
 
@@ -120,13 +119,13 @@ Message: ${formData.message}
             <span className="text-blue-600 font-semibold tracking-wider text-sm uppercase">Get In Touch</span>
             <div className="w-12 h-0.5 bg-blue-600"></div>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 bg-gradient-to-r from-gray-900 to-blue-900 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
             Let's Connect
           </h1>
           <p className="text-xl text-foreground max-w-3xl mx-auto leading-relaxed font-light">
             Ready to discuss how my 
-            <span className="font-semibold text-gray-900"> financial services expertise</span> and 
-            <span className="font-semibold text-gray-900"> sales leadership</span> can drive growth for your organization?
+            <span className="font-semibold text-foreground"> financial services expertise</span> and 
+            <span className="font-semibold text-foreground"> sales leadership</span> can drive growth for your organization?
           </p>
         </div>
 
@@ -324,36 +323,6 @@ Message: ${formData.message}
                   )}
                 </div>
               </form>
-            </div>
-          </div>
-        </div>
-
-        {/* Additional Contact CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Prefer a Direct Approach?</h3>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Feel free to reach out directly via email or phone for immediate professional inquiries.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="mailto:sureshnaribol82@gmail.com"
-                className="inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
-              >
-                <svg className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                Send Email
-              </a>
-              <a 
-                href="tel:+919632064020"
-                className="inline-flex items-center justify-center px-6 py-3 bg-white/20 text-white rounded-lg font-semibold hover:bg-white/30 transition-colors duration-300 border border-white/30"
-              >
-                <svg className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                Call Now
-              </a>
             </div>
           </div>
         </div>

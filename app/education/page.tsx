@@ -75,13 +75,13 @@ const EducationPage = () => {
             <span className="text-blue-600 font-semibold tracking-wider text-sm uppercase">Academic Credentials</span>
             <div className="w-12 h-0.5 bg-blue-600"></div>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 bg-gradient-to-r from-gray-900 to-blue-900 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
             Education & Certifications
           </h1>
           <p className="text-xl text-foreground max-w-3xl mx-auto leading-relaxed font-light">
             Strong academic foundation complemented by professional certifications, 
-            providing the <span className="font-semibold text-gray-900">theoretical knowledge</span> and 
-            <span className="font-semibold text-gray-900"> regulatory expertise</span> essential for 
+            providing the <span className="font-semibold text-foreground">theoretical knowledge</span> and 
+            <span className="font-semibold text-foreground"> regulatory expertise</span> essential for 
             excellence in financial services leadership.
           </p>
         </div>
@@ -163,8 +163,8 @@ const EducationPage = () => {
                 </div>
 
                 {/* Professional Relevance */}
-                <div className="mt-4 p-3 bg-gray-50 rounded-lg">
-                  <p className="text-xs text-foreground">
+                <div className="mt-4 p-3 bg-card rounded-lg border border-gray-200">
+                  <p className="text-sm text-foreground">
                     <span className="font-semibold">Career Relevance:</span> {edu.relevance}
                   </p>
                 </div>

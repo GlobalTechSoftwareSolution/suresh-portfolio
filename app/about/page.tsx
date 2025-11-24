@@ -1,3 +1,5 @@
+'use client'
+
 const AboutPage = () => {
   return (
     <div className="min-h-screen bg-background py-20 px-4 sm:px-6 lg:px-8">
@@ -10,24 +12,25 @@ const AboutPage = () => {
             <span className="text-blue-600 font-semibold tracking-wider text-sm uppercase">Professional Profile</span>
             <div className="w-12 h-0.5 bg-blue-600"></div>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 bg-gradient-to-r from-gray-900 to-blue-900 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
             About Me
           </h1>
           <p className="text-xl text-foreground max-w-3xl mx-auto leading-relaxed font-light">
-            Senior Financial Services Executive with 8+ years of expertise in driving 
-            <span className="font-semibold text-gray-900"> strategic sales leadership</span> and 
-            <span className="font-semibold text-gray-900"> elite relationship management</span>.
+            Senior Financial Services Manager with 8+ years of expertise in driving 
+            <span className="font-semibold text-foreground"> strategic sales leadership</span> and 
+            <span className="font-semibold text-foreground"> elite relationship management</span>.
           </p>
         </div>
 
         {/* Enhanced Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 items-start">
           
-          {/* Premium Image Section */}
-          <div className="flex justify-center lg:justify-start">
+          {/* Images Section - Two images on the left side */}
+          <div className="space-y-8">
+            {/* Main Profile Image */}
             <div className="relative group">
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur-lg opacity-25 group-hover:opacity-50 transition duration-500"></div>
-              <div className="relative w-80 h-80 card rounded-2xl shadow-2xl overflow-hidden border border-white/20">
+              <div className="relative w-full h-80 card rounded-2xl shadow-2xl overflow-hidden border border-white/20">
                 <img 
                   src="/image.png" 
                   alt="Suresh S - Senior Financial Services Executive"
@@ -36,9 +39,41 @@ const AboutPage = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
               </div>
             </div>
+            
+            {/* Scanner Image with Text */}
+            <div className="space-y-4 mt-20">
+              <div className="text-center">
+                <h3 className="text-lg font-semibold text-foreground">Scan this to contact</h3>
+                <p className="text-sm text-foreground/70 mt-2 mb-10">Quick connect via QR code</p>
+              </div>
+              <div className="relative group">
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur-lg opacity-25 group-hover:opacity-50 transition duration-500"></div>
+                <div className="relative w-full h-80 card rounded-2xl shadow-2xl overflow-hidden border border-white/20">
+                  <img 
+                    src="/images/scanner.jpg" 
+                    alt="Professional Scanner"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition duration-700 ease-out"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      if (target.nextElementSibling) {
+                        (target.nextElementSibling as HTMLElement).style.display = 'flex';
+                      }
+                    }}
+                  />
+                  <div 
+                    className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-full flex items-center justify-center text-gray-500"
+                    style={{ display: 'none' }}
+                  >
+                    Scanner Image
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Enhanced Content Section */}
+          {/* Enhanced Content Section - Text on the right side */}
           <div className="lg:col-span-2 space-y-12">
             
             {/* Professional Identity */}
@@ -56,16 +91,16 @@ const AboutPage = () => {
               <div className="prose prose-lg text-foreground space-y-6">
                 <p className="text-lg leading-relaxed font-light">
                   Accomplished financial services professional with a demonstrated history of excellence in 
-                  <span className="font-semibold text-gray-900"> sales leadership</span> and 
-                  <span className="font-semibold text-gray-900"> client relationship management</span>. 
+                  <span className="font-semibold text-foreground"> sales leadership</span> and 
+                  <span className="font-semibold text-foreground"> client relationship management</span>. 
                   Currently spearheading strategic partnerships and business expansion initiatives at Kotak Securities.
                 </p>
                 
                 <p className="text-lg leading-relaxed font-light">
                   Proven track record across premier financial institutions including 
-                  <span className="font-semibold text-gray-900"> Motilal Oswal</span>, 
-                  <span className="font-semibold text-gray-900"> Indiabulls Ventures</span>, and 
-                  <span className="font-semibold text-gray-900"> Angel Broking</span>. 
+                  <span className="font-semibold text-foreground"> Motilal Oswal</span>, 
+                  <span className="font-semibold text-foreground"> Indiabulls Ventures</span>, and 
+                  <span className="font-semibold text-foreground"> Angel Broking</span>. 
                   MBA graduate from Karnataka University with comprehensive expertise in financial markets and investment products.
                 </p>
               </div>
@@ -90,7 +125,7 @@ const AboutPage = () => {
                 ].map((skill, index) => (
                   <div key={index} className="flex items-center space-x-3 group">
                     <div className="w-3 h-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full transform group-hover:scale-125 transition duration-300"></div>
-                    <span className="text-foreground font-medium group-hover:text-gray-900 transition-colors duration-300">
+                    <span className="text-foreground font-medium group-hover:text-foreground transition-colors duration-300">
                       {skill}
                     </span>
                   </div>

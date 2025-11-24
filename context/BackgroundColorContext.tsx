@@ -28,7 +28,9 @@ export function BackgroundColorProvider({ children }: { children: React.ReactNod
     // Apply theme to document
     if (backgroundTheme === 'dark') {
       document.documentElement.classList.add('dark-bg');
+      document.documentElement.classList.remove('light-bg');
     } else {
+      document.documentElement.classList.add('light-bg');
       document.documentElement.classList.remove('dark-bg');
     }
     

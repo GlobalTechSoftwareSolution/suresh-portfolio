@@ -120,15 +120,15 @@ const ExperiencePage = () => {
             <span className="text-blue-600 font-semibold tracking-wider text-sm uppercase">Professional Journey</span>
             <div className="w-12 h-0.5 bg-blue-600"></div>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 bg-gradient-to-r from-gray-900 to-blue-900 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
             Work Experience
           </h1>
           <p className="text-xl text-foreground max-w-3xl mx-auto leading-relaxed font-light">
             Progressive career growth across 
-            <span className="font-semibold text-gray-900"> premier financial institutions</span>, 
+            <span className="font-semibold text-foreground"> premier financial institutions</span>, 
             demonstrating consistent advancement in 
-            <span className="font-semibold text-gray-900"> sales leadership</span> and 
-            <span className="font-semibold text-gray-900"> channel management</span>.
+            <span className="font-semibold text-foreground"> sales leadership</span> and 
+            <span className="font-semibold text-foreground"> channel management</span>.
           </p>
         </div>
 
@@ -166,7 +166,7 @@ const ExperiencePage = () => {
                     className={`w-full text-left p-4 rounded-xl border transition-all duration-300 ${
                       selectedExp.id === exp.id
                         ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg transform scale-[1.02] border-blue-500"
-                        : "bg-white/50 text-foreground hover:bg-white hover:shadow-md border-gray-200"
+                        : "bg-card text-foreground hover:bg-card hover:shadow-md border-gray-200"
                     }`}
                   >
                     <div className="flex justify-between items-start mb-2">

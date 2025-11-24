@@ -73,14 +73,14 @@ const ProjectsPage = () => {
             <span className="text-blue-600 font-semibold tracking-wider text-sm uppercase">Professional Projects</span>
             <div className="w-12 h-0.5 bg-blue-600"></div>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 bg-gradient-to-r from-gray-900 to-blue-900 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
             Projects & Research
           </h1>
           <p className="text-xl text-foreground max-w-3xl mx-auto leading-relaxed font-light">
             Academic and Professional Projects showcasing my 
-            <span className="font-semibold text-gray-900"> analytical capabilities</span>, 
-            <span className="font-semibold text-gray-900"> research expertise</span>, and 
-            <span className="font-semibold text-gray-900"> strategic thinking</span>.
+            <span className="font-semibold text-foreground"> analytical capabilities</span>, 
+            <span className="font-semibold text-foreground"> research expertise</span>, and 
+            <span className="font-semibold text-foreground"> strategic thinking</span>.
           </p>
         </div>
 
@@ -163,19 +163,6 @@ const ProjectsPage = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Interested in Collaborating?</h3>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Let's discuss how my research and analytical capabilities can contribute to your organization's success.
-            </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
-              <Link href="/contact">Get In Touch</Link>
-            </button>
-          </div>
         </div>
 
       </div>

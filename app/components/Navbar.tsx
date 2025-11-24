@@ -27,7 +27,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-500 header`}>
+    <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-header backdrop-blur-md shadow-md' : 'bg-transparent'} header`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Brand */}
@@ -41,12 +41,12 @@ const Navbar = () => {
                 <span className="text-white font-bold text-sm">SS</span>
               </div>
               <div>
-                <span className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                <span className="text-xl font-bold text-foreground group-hover:text-blue-600 transition-colors duration-300">
                   Suresh S
                 </span>
                 <div className="flex items-center space-x-1">
                   <div className="w-1 h-1 bg-green-500 rounded-full"></div>
-                  <span className="text-xs text-gray-500 font-medium">Financial Services Executive</span>
+                  <span className="text-xs text-foreground/60 font-medium">Financial Services Executive</span>
                 </div>
               </div>
             </Link>
@@ -58,7 +58,7 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 href={link.href}
-                className="relative px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors duration-300 group"
+                className="relative px-4 py-2 text-sm font-medium text-foreground hover:text-blue-600 transition-colors duration-300 group"
               >
                 {link.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
@@ -89,7 +89,7 @@ const Navbar = () => {
             </Link>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors duration-200"
+              className="inline-flex items-center justify-center p-2 rounded-lg text-foreground hover:text-foreground/80 hover:bg-foreground/10 transition-colors duration-200"
             >
               <svg
                 className={`${isMenuOpen ? "hidden" : "block"} h-6 w-6`}
@@ -130,13 +130,13 @@ const Navbar = () => {
           ? "max-h-96 opacity-100 visible" 
           : "max-h-0 opacity-0 invisible"
       }`}>
-        <div className="bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-xl">
+        <div className="bg-header/95 backdrop-blur-md border-t border-foreground/20 shadow-xl">
           <div className="px-4 pt-2 pb-4 space-y-1">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="block px-4 py-3 rounded-lg text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 border-l-4 border-transparent hover:border-blue-600"
+                className="block px-4 py-3 rounded-lg text-base font-medium text-foreground hover:text-blue-600 hover:bg-blue-50/10 transition-all duration-200 border-l-4 border-transparent hover:border-blue-600"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}
@@ -144,7 +144,7 @@ const Navbar = () => {
             ))}
             
             {/* Background Color Toggle */}
-            <div className="pt-4 border-t border-gray-200 flex justify-center">
+            <div className="pt-4 border-t border-foreground/20 flex justify-center">
               <BackgroundColorToggle />
             </div>
             
