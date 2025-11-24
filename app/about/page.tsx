@@ -50,17 +50,18 @@ const AboutPage = () => {
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur-lg opacity-25 group-hover:opacity-50 transition duration-500"></div>
                 <div className="relative w-full h-80 card rounded-2xl shadow-2xl overflow-hidden border border-white/20">
                   <img 
-                    src="/images/scanner.jpg" 
-                    alt="Professional Scanner"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition duration-700 ease-out"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
-                      if (target.nextElementSibling) {
-                        (target.nextElementSibling as HTMLElement).style.display = 'flex';
-                      }
-                    }}
-                  />
+                  src="/images/scanner.jpg" 
+                  alt="Professional Scanner"
+                  className="w-full h-full object-contain transform group-hover:scale-105 transition duration-700 ease-out"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    if (target.nextElementSibling) {
+                      (target.nextElementSibling as HTMLElement).style.display = 'flex';
+                    }
+                  }}
+                />
+
                   <div 
                     className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-full flex items-center justify-center text-gray-500"
                     style={{ display: 'none' }}
